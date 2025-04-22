@@ -1,7 +1,3 @@
-import matplotlib.pyplot as plt
-import numpy as np
-
-
 class Grid:
     """
     Class to represent an assignment of values to the 81 variables defining a Sudoku puzzle. 
@@ -329,7 +325,7 @@ class Backtracking:
 
 
 # file = open('tutorial_problem.txt', 'r')
-file = open('top95.txt', 'r')
+file = open('puzzles.txt', 'r')
 problems = file.readlines()
 
 for idx, p in enumerate(problems):

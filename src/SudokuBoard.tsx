@@ -13,16 +13,9 @@ const SudokuBoard = () => {
   };
 
   const solveSudoku = async () => {
-    // Send the board to your Python backend and get the solution
-    const response = await fetch('http://your-backend-url/solve', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(board),
-    });
-    const data = await response.json();
-    setSolvedBoard(data.solution);
+  };
+
+  const fillRandomPuzzle  = async () => {
   };
 
   const clearBoard = () => {
@@ -56,6 +49,7 @@ const SudokuBoard = () => {
       <div className="controls">
         <button onClick={solveSudoku}>Solve</button>
         <button onClick={clearBoard}>Clear</button>
+        <button onClick={fillRandomPuzzle}>Fill Random Puzzle</button>        
       </div>
       {solvedBoard && (
         <div className="solved-board">
