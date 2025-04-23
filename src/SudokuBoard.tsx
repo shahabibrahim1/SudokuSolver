@@ -1,4 +1,3 @@
-// SudokuBoard.tsx
 import React, { useState, useEffect } from 'react';
 import { Grid, MRV, AC3, Backtracking } from './SudokuSolver';
 import puzzles from './puzzles.txt?raw';
@@ -11,7 +10,6 @@ const SudokuBoard = () => {
   const [highlighted, setHighlighted] = useState<{row?: number; col?: number; box?: number}>({});
 
   useEffect(() => {
-    // Parse puzzles from text file
     const parsedPuzzles = puzzles.split('\n').filter(line => line.trim().length > 0);
     setPuzzleList(parsedPuzzles);
   }, []);
@@ -74,7 +72,6 @@ const SudokuBoard = () => {
   };
 
   const handleCellChange = (row: number, col: number, value: string) => {
-    // Prevent any non-numeric input and numbers outside 1-9
     if (!value) {
       const newBoard = board.map((rowArr, r) =>
         r === row ? rowArr.map((cell, c) => (c === col ? 0 : cell)) : rowArr
@@ -107,7 +104,6 @@ const SudokuBoard = () => {
 
     const grid = new Grid();
     
-    // Convert the current board state to the solver's format
     for (let i = 0; i < 9; i++) {
       for (let j = 0; j < 9; j++) {
         if (board[i][j] !== 0) {

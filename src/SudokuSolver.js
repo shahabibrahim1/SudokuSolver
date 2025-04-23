@@ -1,4 +1,3 @@
-// SudokuSolver.js
 class Grid {
     constructor() {
         this._cells = Array(9).fill().map(() => Array(9).fill('123456789'));
@@ -197,7 +196,6 @@ class AC3 {
             const unitResult = this.removeDomainUnit(grid, row, col);
             if (unitResult.failure) return true;
             
-            // Add newly assigned variables to queue
             [...rowResult.variables, ...colResult.variables, ...unitResult.variables]
                 .forEach(varObj => {
                     if (!queue.some(item => 

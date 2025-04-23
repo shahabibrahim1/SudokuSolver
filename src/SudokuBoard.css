@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Changed from center to flex-start */
-    height: auto; /* Changed from 100vh to auto */
-    min-height: 100vh; /* Add minimum height */
+    justify-content: flex-start; 
+    height: auto;
+    min-height: 100vh; 
     background-color: #f0f0f0;
-    padding: 20px; /* Add padding for better spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    padding: 20px; 
+    box-sizing: border-box; 
 }
 
 .grid-container {
@@ -39,7 +39,6 @@ outline: none;
 background-color: #e6f7ff;
 }
 
-/* Thicker borders for 3x3 boxes */
 .cell:nth-child(3n) {
 border-right: 2px solid #000;
 }
@@ -86,7 +85,6 @@ background-color: #f0f0f0;
     border-radius: 4px;
 }
 
-/* Add these to your CSS file */
 .highlight-row {
     background-color: #ffcccc;
   }
