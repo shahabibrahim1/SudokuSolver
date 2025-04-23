@@ -2,9 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    height: auto; /* Changed from 100vh to auto */
+    min-height: 100vh; /* Add minimum height */
     background-color: #f0f0f0;
+    padding: 20px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .grid-container {
@@ -49,6 +52,8 @@ border-bottom: 2px solid #000;
 margin-top: 20px;
 display: flex;
 gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 button {
@@ -58,6 +63,7 @@ color: white;
 border: none;
 border-radius: 4px;
 cursor: pointer;
+min-width: 120px;
 }
 
 button:hover {

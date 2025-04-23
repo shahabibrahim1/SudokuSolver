@@ -24,7 +24,7 @@ const SudokuBoard = () => {
       for (let col = 0; col < 9; col++) {
         if (board[row][col] !== 0) {
           if (rowValues.has(board[row][col])) {
-            setError(`Invalid board: Duplicate value in row ${row + 1}`);
+            setError(`Invalid board: Duplicate value in row`);
             setHighlighted({ row });
             return true;
           }
@@ -40,7 +40,7 @@ const SudokuBoard = () => {
       for (let row = 0; row < 9; row++) {
         if (board[row][col] !== 0) {
           if (colValues.has(board[row][col])) {
-            setError(`Invalid board: Duplicate value in column ${col + 1}`);
+            setError(`Invalid board: Duplicate value in column`);
             setHighlighted({ col });
             return true;
           }
@@ -58,7 +58,7 @@ const SudokuBoard = () => {
           for (let col = boxCol * 3; col < boxCol * 3 + 3; col++) {
             if (board[row][col] !== 0) {
               if (boxValues.has(board[row][col])) {
-                setError(`Invalid board: Duplicate value in box (${boxRow + 1}, ${boxCol + 1})`);
+                setError(`Invalid board: Duplicate value in box`);
                 setHighlighted({ box: boxRow * 3 + boxCol });
                 return true;
               }
