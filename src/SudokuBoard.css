@@ -70,3 +70,25 @@ padding: 20px;
 border: 1px solid #000;
 background-color: #f0f0f0;
 }
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+}
+
+/* Add these to your CSS file */
+.highlight-row {
+    background-color: #ffcccc;
+  }
+  
+  .highlight-col {
+    background-color: #ffcccc;
+  }
+  
+  .highlight-box {
+    background-color: #ffcccc;
+  }
