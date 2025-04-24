@@ -23,11 +23,11 @@ Under the hood the solver treats Sudoku as a **Constraint Satisfaction Problem (
 
 | Layer | Tech / File(s) | Key Responsibilities |
 |-------|----------------|----------------------|
-| **UI / Front-end** | `SudokuBoard.tsx`, `SudokuBoard.css` | Render 9×9 grid, manage input validation, error highlighting, buttons for **Solve / Clear / Random** :contentReference[oaicite:0]{index=0} |
-| **State Management** | React hooks (`useState`, `useEffect`) | Keep track of the current board, solved board, and error states :contentReference[oaicite:1]{index=1}&#8203;:contentReference[oaicite:2]{index=2} |
-| **Random Puzzle Loader** | `puzzles.txt` | Supplies hundreds of dot-notation puzzles for quick testing :contentReference[oaicite:3]{index=3}&#8203;:contentReference[oaicite:4]{index=4} |
+| **UI / Front-end** | `SudokuBoard.tsx`, `SudokuBoard.css` | Render 9×9 grid, manage input validation, error highlighting, buttons for **Solve / Clear / Random** |
+| **State Management** | React hooks (`useState`, `useEffect`) | Keep track of the current board, solved board, and error states |
+| **Random Puzzle Loader** | `puzzles.txt` | Supplies hundreds of dot-notation puzzles for quick testing |
 | **Solver Core** | `SudokuSolver.js` | *CSP engine*: AC-3 filtering → backtracking with MRV |
-| **Bootstrap Styling** | Imported globally in `main.tsx` | Gives buttons & layout a clean look out of the box :contentReference[oaicite:5]{index=5}&#8203;:contentReference[oaicite:6]{index=6} |
+| **Bootstrap Styling** | Imported globally in `main.tsx` | Gives buttons & layout a clean look out of the box |
 
 Algorithm flow:
 
