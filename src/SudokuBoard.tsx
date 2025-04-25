@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Grid, MRV, AC3, Backtracking } from './SudokuSolver';
 import puzzles from './puzzles.txt?raw';
 
 const SudokuBoard = () => {
-  const [board, setBoard] = useState<number[][]>(Array(9).fill().map(() => Array(9).fill(0)));
+  const [board, setBoard] = useState<number[][]>(Array(9).fill(null).map(() => Array(9).fill(0)));
   const [solvedBoard, setSolvedBoard] = useState<number[][] | null>(null);
   const [puzzleList, setPuzzleList] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -123,8 +123,8 @@ const SudokuBoard = () => {
     const result = backtracking.search(grid, mrv);
 
     if (result.success) {
-      const solution = result.solution.getCells().map(row => 
-        row.map(cell => parseInt(cell))
+      const solution = result.solution.getCells().map((row: any[]) => 
+        row.map((cell: string) => parseInt(cell))
       );
       setSolvedBoard(solution);
     } else {
@@ -139,7 +139,7 @@ const SudokuBoard = () => {
     const randomIndex = Math.floor(Math.random() * puzzleList.length);
     const selectedPuzzle = puzzleList[randomIndex];
 
-    const newBoard = Array(9).fill().map(() => Array(9).fill(0));
+    const newBoard = Array(9).fill(null).map(() => Array(9).fill(0));
     for (let i = 0; i < 81; i++) {
       const row = Math.floor(i / 9);
       const col = i % 9;
@@ -153,7 +153,7 @@ const SudokuBoard = () => {
   };
 
   const clearBoard = () => {
-    setBoard(Array(9).fill().map(() => Array(9).fill(0)));
+    setBoard(Array(9).fill(null).map(() => Array(9).fill(0)));
     setSolvedBoard(null);
     setError(null);
     setHighlighted({});

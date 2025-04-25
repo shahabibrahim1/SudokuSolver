@@ -1,6 +1,7 @@
+// @ts-nocheck
 class Grid {
     constructor() {
-        this._cells = Array(9).fill().map(() => Array(9).fill('123456789'));
+        this._cells = Array(9).fill(null).map(() => Array(9).fill('123456789'));
         this._completeDomain = "123456789";
         this._width = 9;
     }
