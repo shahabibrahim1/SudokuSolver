@@ -161,7 +161,7 @@ const SudokuBoard = () => {
 
   return (
     <div className="sudoku-board">
-      <h1>Sudok Solver</h1>
+      <h1>Sudoku Solver</h1>
       {error && <div className="error-message">{error}</div>}
       <div className="grid-container">
         {board.map((row, rowIdx) => (
