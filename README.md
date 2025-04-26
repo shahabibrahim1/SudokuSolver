@@ -14,11 +14,6 @@ Under the hood the solver treats Sudoku as a **Constraint Satisfaction Problem (
 
 ---
 
-## ✨ Demo
-
-******
----
-
 ## 🔍 How it Works
 
 | Layer | Tech / File(s) | Key Responsibilities |
